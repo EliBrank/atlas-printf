@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * _printf- prints string with format specifiers
+ * _printf - prints string with format specifiers
  *
  * @format: string containing the format specifier(s)
  *
