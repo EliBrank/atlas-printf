@@ -9,4 +9,8 @@ struct format_spec
 	void (*function)(char *);
 }
 
+void print_str(char *s);
+void print_char(char c);
+void print_percent(char percent);
+
 #endif
