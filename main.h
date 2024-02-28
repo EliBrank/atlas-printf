@@ -6,7 +6,7 @@ int _putchar(char c);
 struct format_spec
 {
 	char type;
-	void (function)(char*);
+	void (*function)(char *);
 }
 
 #endif
