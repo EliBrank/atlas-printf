@@ -20,11 +20,6 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 		};
 
-	struct format_spec
-	{
-		char type;
-		char *(function*)();
-	}
 	i = 0;
 	while (ops[i].opSign != NULL)
 	{
