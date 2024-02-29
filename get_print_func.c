@@ -11,7 +11,7 @@ int (*get_print_func(char t))(void *)
 {
 	int i;
 
-	format_spec spec[] = {
+	struct format_spec spec[] = {
 		{'s', print_str},
 		{'c', print_char},
 		{'%', print_percent},
