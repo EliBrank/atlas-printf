@@ -14,19 +14,24 @@
 
 int _printf(const char *format, ...)
 {
+	va_list args;
 	int count;
+
+	va_start(args, format);
 
 	while(*format != '\0')
 	{
 		if (*format == '%')
 		{
-			count++;
-			get_print_func(*(format++));
+			count += get_print_func(*(format++), args);
 		}
 		else
 		{
 			_putchar(*format);
+			count++;
 		}
 		format++;
 	}
+	va_end(args);
+	return (count);
 }
