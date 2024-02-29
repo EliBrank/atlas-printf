@@ -5,6 +5,7 @@ int _putchar(char c);
 void print_str(char *s);
 void print_char(char c);
 void print_percent(char percent);
+int (*get_print_func(char t))(void *);
 
 struct format_spec
 {
