@@ -1,5 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
+#include <starg.h>
 
 int _putchar(char c);
 void print_str(char *s);
