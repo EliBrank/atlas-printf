@@ -7,7 +7,7 @@
  * Return: pointer to func that corresponds to print specifier, NULL if failure
  */
 
-int (*get_print_func(char t))(void *)
+int (*get_print_func(char t, va_list args))(void *)
 {
 	int i;
 
