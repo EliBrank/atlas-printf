@@ -6,8 +6,7 @@ int main(void)
 {
 	int var;
 
-	var = _putchar(0);
-	_putchar('\n');
+	var = printf("\n\n\n");
 	printf("%d\n", var);
 	return (0);
 }
