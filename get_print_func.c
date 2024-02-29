@@ -7,7 +7,7 @@
  * Return: pointer to func that corresponds to print specifier, NULL if failure
  */
 
-int (*get_print_func(char t))(char *)
+int (*get_print_func(char t))(void *)
 {
 	int i;
 
@@ -15,17 +15,19 @@ int (*get_print_func(char t))(char *)
 		{'s', print_str},
 		{'c', print_char},
 		{'%', print_percent},
-		{'i', print_ui}
-		{'d', print_int}
+		/*
+		{'i', print_ui},
+		{'d', print_int},
+		*/
 		{NULL, NULL}
 		};
 
 	i = 0;
 	while (spec[i].type != NULL)
 	{
-		if (*s == *(spec[i].type))
+		if (t == *(spec[i].type))
 		{
-			return (ops[i].function);
+			return (spec[i].function);
 		}
 		i++;
 	}
