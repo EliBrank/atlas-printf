@@ -14,5 +14,19 @@
 
 int _printf(const char *format, ...)
 {
+	int count;
 
+	while(*format != '\0')
+	{
+		if (*format == '%')
+		{
+			count++;
+			get_print_func(*(format++));
+		}
+		else
+		{
+			_putchar(*format);
+		}
+		format++;
+	}
 }
