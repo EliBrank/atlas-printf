@@ -1,5 +1,5 @@
 #include "main.h"
-#include <starg.h>
+#include <stdarg.h>
 
 /**
  * get_print_func - gets math operator for two ints
