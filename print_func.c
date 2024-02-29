@@ -26,9 +26,25 @@ void print_char(char c)
 
 /**
  * print_int - prints %
- * @ to print
  */
 void print_percent(char percent)
 {
 	_putchar('%');
 }
+
+/**
+ * print_int - prints int
+ * @i: int to print
+ */
+/*
+void print_int(int i)
+{
+	int num;
+
+	if (num < 0)
+	{
+		_putchar('-');
+		num *= -1;
+	}
+}
+*/
