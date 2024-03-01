@@ -14,9 +14,9 @@ int (*get_print_func(char t, va_list args))(void *)
 	int i;
 
 	format_spec spec[] = {
-		{'s', print_str},
-		{'c', print_char},
-		{'%', print_percent},
+		{'s', (void (*))print_str},
+		{'c', (void (*))print_char},
+		{'%', (void (*))print_percent},
 		/*
 		{'i', print_ui},
 		{'d', print_int},
