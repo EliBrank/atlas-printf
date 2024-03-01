@@ -23,6 +23,6 @@ int get_print_func(char t, va_list args)
 		case 'd':
 			return (print_int(va_arg(args, int)));
 		default:
-			return (-1);
+			return (_putchar('%') + _putchar(t));
 	}
 }
