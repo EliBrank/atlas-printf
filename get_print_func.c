@@ -12,7 +12,9 @@
 int (*get_print_func(char t, va_list args))(void *)
 {
 	int i;
+	int count;
 
+	count = 0;
 	struct format_spec spec[] = {
 		{'s', print_str},
 		{'c', print_char},
@@ -24,7 +26,19 @@ int (*get_print_func(char t, va_list args))(void *)
 		{NULL, NULL}
 		};
 
-	i = 0;
+	switch (t)
+	{
+		case 's':
+			count += print_str(va_arg(args, char *));
+		case 'c':
+			count += print_char(va_arg(args, int));
+		case '%':
+			count += print_percent(va_arg(args, int));
+		case 'i':
+		case 'd':
+	}
+
+
 	while (spec[i].type != NULL)
 	{
 		if (t == *(spec[i].type))
