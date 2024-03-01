@@ -5,31 +5,43 @@
  * print_str - prints string
  * @s: string to print
  */
-void print_str(char *s)
+int print_str(void *form)
 {
 	int i;
+	int count;
+	data *ptr = (data *)form;
 
-	for (i = 0; s[i] != '\0'; i++)
+	count = 0;
+	for (i = 0; ptr->str_data[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
+		_putchar(ptr->str_data[i]);
+		count++;
 	}
+
+	return (count);
 }
 
 /**
  * print_char - prints char
  * @c: char to print
  */
-void print_char(char c)
+int print_char(void *form)
 {
-	_putchar(c);
+	data *ptr = (data *)form;
+
+	/* prints char and returns 1 */
+	return (_putchar(ptr->char_data));
 }
 
 /**
  * print_int - prints %
  */
-void print_percent(char percent)
+int print_percent(void *form)
 {
-	_putchar('%');
+	data *ptr = (data *)form;
+
+	/* prints percent and returns 1 */
+	return (_putchar(ptr->char_data));
 }
 
 /**

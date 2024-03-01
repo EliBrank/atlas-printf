@@ -13,7 +13,7 @@ int (*get_print_func(char t, va_list args))(void *)
 {
 	int i;
 
-	struct format_spec spec[] = {
+	format_spec spec[] = {
 		{'s', print_str},
 		{'c', print_char},
 		{'%', print_percent},
@@ -21,11 +21,11 @@ int (*get_print_func(char t, va_list args))(void *)
 		{'i', print_ui},
 		{'d', print_int},
 		*/
-		{NULL, NULL}
+		{0, NULL}
 		};
 
 	i = 0;
-	while (spec[i].type != NULL)
+	while (spec[i].type != 0)
 	{
 		if (t == *(spec[i].type))
 		{
