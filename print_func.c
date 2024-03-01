@@ -12,7 +12,7 @@ int print_str(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == (char *)0)
+		if (s == (char *)0)
 		{
 			print_str("(null)");
 		}
