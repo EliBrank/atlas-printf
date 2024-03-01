@@ -9,19 +9,15 @@ int print_str(char *s)
 {
 	int i;
 	int count = 0;
-	char *ptr = (char *)0;
 
+	if (s == NULL)
+	{
+		print_str("(null)");
+	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s == ptr)
-		{
-			print_str("(null)");
-		}
-		else
-		{
-			_putchar(s[i]);
-			count++;
-		}
+		_putchar(s[i]);
+		count++;
 	}
 
 	return (count);
