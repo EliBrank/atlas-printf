@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			count += get_print_func(*(format++), args);
+			count += get_print_func(*(++format), args);
 		}
 		else
 		{
