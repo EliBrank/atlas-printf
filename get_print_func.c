@@ -5,6 +5,7 @@
 /**
  * get_print_func - gets math operator for two ints
  * @t: char which determines specifier to print
+ * @args: brings in arguments from variadic func
  *
  * Return: pointer to func that corresponds to print specifier, NULL if failure
  */

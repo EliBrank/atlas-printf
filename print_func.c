@@ -4,6 +4,8 @@
 /**
  * print_str - prints string
  * @s: string to print
+ *
+ * Return: sends back updated print count
  */
 int print_str(char *s)
 {
@@ -26,6 +28,8 @@ int print_str(char *s)
 /**
  * print_char - prints char
  * @c: char to print
+ *
+ * Return: sends back updated print count
  */
 int print_char(char c)
 {
@@ -34,7 +38,9 @@ int print_char(char c)
 }
 
 /**
- * print_int - prints %
+ * print_percent - prints %
+ *
+ * Return: sends back updated print count
  */
 int print_percent(void)
 {
@@ -45,6 +51,8 @@ int print_percent(void)
 /**
  * print_int - prints int
  * @d: int to print
+ *
+ * Return: sends back updated print count
  */
 
 int print_int(int d)
