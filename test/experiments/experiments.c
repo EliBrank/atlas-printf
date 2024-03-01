@@ -6,7 +6,7 @@ int main(void)
 {
 	int var;
 
-	var = printf("\n\n\n");
+	var = printf("%k");
 	printf("%d\n", var);
 	return (0);
 }

@@ -9,44 +9,23 @@
  * Return: pointer to func that corresponds to print specifier, NULL if failure
  */
 
-int (*get_print_func(char t, va_list args))(void *)
+int get_print_func(char t, va_list args)
 {
-	int i;
-	int count;
-
-	count = 0;
-	struct format_spec spec[] = {
-		{'s', print_str},
-		{'c', print_char},
-		{'%', print_percent},
-		/*
-		{'i', print_ui},
-		{'d', print_int},
-		*/
-		{NULL, NULL}
-		};
-
 	switch (t)
 	{
 		case 's':
-			count += print_str(va_arg(args, char *));
+			return (print_str(va_arg(args, char *)));
 		case 'c':
-			count += print_char(va_arg(args, int));
+			return (print_char(va_arg(args, int)));
 		case '%':
-			count += print_percent(va_arg(args, int));
+			return (print_percent());
+		/*
 		case 'i':
+			return (print_ui(va_arg(args, int)));
 		case 'd':
+			return (print_int(va_arg(args, int)));
+		*/
+		default:
+			return (0);
 	}
-
-
-	while (spec[i].type != NULL)
-	{
-		if (t == *(spec[i].type))
-		{
-			return (spec[i].function);
-		}
-		i++;
-	}
-
-	return (NULL);
 }

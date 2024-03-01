@@ -5,31 +5,37 @@
  * print_str - prints string
  * @s: string to print
  */
-void print_str(char *s)
+int print_str(char *s)
 {
 	int i;
+	int count = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(s[i]);
+		count++;
 	}
+
+	return (count);
 }
 
 /**
  * print_char - prints char
  * @c: char to print
  */
-void print_char(char c)
+int print_char(char c)
 {
-	_putchar(c);
+	/* print char and return 1 */
+	return (_putchar(c));
 }
 
 /**
  * print_int - prints %
  */
-void print_percent(char percent)
+int print_percent(void)
 {
-	_putchar('%');
+	/* print % and return 1 */
+	return (_putchar('%'));
 }
 
 /**

@@ -3,15 +3,10 @@
 #include <stdarg.h>
 
 int _putchar(char c);
-void print_str(char *s);
-void print_char(char c);
-void print_percent(char percent);
-int (*get_print_func(char t, va_list args))(void *);
-
-struct format_spec
-{
-	char type;
-	void (*function)(char *);
-};
+int _printf(const char *format, ...);
+int print_str(char *s);
+int print_char(char c);
+int print_percent(void);
+int get_print_func(char t, va_list args);
 
 #endif
