@@ -12,8 +12,15 @@ int print_str(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
-		count++;
+		if (s[i] == (char *)0)
+		{
+			print_str("(null)");
+		}
+		else
+		{
+			_putchar(s[i]);
+			count++;
+		}
 	}
 
 	return (count);
@@ -66,4 +73,4 @@ int print_int(int d)
 	}
 	return (count);
 }
- 
+
