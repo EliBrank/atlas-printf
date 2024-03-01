@@ -7,6 +7,7 @@ int _printf(const char *format, ...);
 int print_str(char *s);
 int print_char(char c);
 int print_percent(void);
+int print_int(int d);
 int get_print_func(char t, va_list args);
 
 #endif

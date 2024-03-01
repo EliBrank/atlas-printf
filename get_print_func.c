@@ -19,12 +19,9 @@ int get_print_func(char t, va_list args)
 			return (print_char(va_arg(args, int)));
 		case '%':
 			return (print_percent());
-		/*
 		case 'i':
-			return (print_ui(va_arg(args, int)));
 		case 'd':
 			return (print_int(va_arg(args, int)));
-		*/
 		default:
 			return (0);
 	}

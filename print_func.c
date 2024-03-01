@@ -40,17 +40,30 @@ int print_percent(void)
 
 /**
  * print_int - prints int
- * @i: int to print
+ * @d: int to print
  */
-/*
-void print_int(int i)
-{
-	int num;
 
-	if (num < 0)
+int print_int(int d)
+{
+	int count = 0;
+
+	if (d < 0)
 	{
 		_putchar('-');
-		num *= -1;
+		d *= -1;
+		count++;
 	}
+	if (d < 10 && d >= 0)
+	{
+		_putchar(d + '0');
+		count++;
+	}
+	else
+	{
+		print_int(d / 10);
+		_putchar((d % 10) + '0');
+		count++;
+	}
+	return (count);
 }
-*/
+ 
