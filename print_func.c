@@ -12,8 +12,7 @@ int print_str(char *s)
 
 	if (s == NULL)
 	{
-		s = "";
-		print_str(s);
+		s = "(null)";
 	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
