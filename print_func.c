@@ -9,10 +9,11 @@ int print_str(char *s)
 {
 	int i;
 	int count = 0;
+	char *ptr = (char *)0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s == (char *)0)
+		if (s == ptr)
 		{
 			print_str("(null)");
 		}
