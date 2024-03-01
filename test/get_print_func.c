@@ -1,0 +1,1 @@
+../get_print_func.c
