@@ -25,7 +25,7 @@ int get_print_func(char t, va_list args)
 			return (print_int(va_arg(args, int)));
 		case ' ':
 		case '\0':
-			return (_putchar('\n'));
+			return (_putchar('\0'));
 		default:
 			return (_putchar('%') + _putchar(t));
 	}
