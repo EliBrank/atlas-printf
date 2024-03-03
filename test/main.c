@@ -30,8 +30,12 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    /*_printf("%");*/
+    _printf("%");
     printf("%");
+    len = _printf("%d\n", 1024);
+    len2 = printf("%d\n", 1024);
+    _printf("_printf Len of 1024:[%d], printf Len of 1024:[%d]\n", len, len2);
+    printf("_printf Len of 1024:[%d], printf Len of 1024:[%d]\n", len, len2);
 
     /*
     _printf("Address:[%p]\n", addr);
