@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * get_print_func - gets math operator for two ints
@@ -25,7 +26,7 @@ int get_print_func(char t, va_list args)
 			return (print_percent());
 		case 'i':
 		case 'd':
-			return (print_int(va_arg(args, long), count_ptr));
+			return (print_int(va_arg(args, int), count_ptr));
 		default:
 			return (_putchar('%') + _putchar(t));
 	}
