@@ -55,24 +55,24 @@ int print_percent(void)
  * Return: sends back updated print count
  */
 
-int print_int(int d, int count)
+int print_int(int d, int *count)
 {
 	if (d < 0)
 	{
 		_putchar('-');
 		d *= -1;
-		count++;
 	}
 	if (d < 10 && d >= 0)
 	{
-		count++;
+		(*count)++;
 		_putchar(d + '0');
 	}
 	else
 	{
-		print_int(d / 10, ++count);
+		(*count)++;
+		print_int(d / 10, count);
 		_putchar((d % 10) + '0');
 	}
-	return (count);
+	return (*count);
 }
 

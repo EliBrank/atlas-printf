@@ -12,6 +12,9 @@
 
 int get_print_func(char t, va_list args)
 {
+	int count = 0;
+	int *count_ptr = &count;
+
 	switch (t)
 	{
 		case 's':
@@ -22,7 +25,7 @@ int get_print_func(char t, va_list args)
 			return (print_percent());
 		case 'i':
 		case 'd':
-			return (print_int(va_arg(args, int), 0));
+			return (print_int(va_arg(args, int), count_ptr));
 		default:
 			return (_putchar('%') + _putchar(t));
 	}
