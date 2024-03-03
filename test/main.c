@@ -32,8 +32,8 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("%");
     printf("%");
-    len = _printf("%d", 1024);
-    len2 = printf("%d", 1024);
+    len = _printf("%d", -1024);
+    len2 = printf("%d", -1024);
     _printf("_printf Len of 1024:[%d], printf Len of 1024:[%d]\n", len, len2);
     printf("_printf Len of 1024:[%d], printf Len of 1024:[%d]\n", len, len2);
 

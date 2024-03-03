@@ -59,6 +59,7 @@ int print_int(int d, int *count)
 {
 	if (d < 0)
 	{
+		(*count)++;
 		_putchar('-');
 		d *= -1;
 	}
