@@ -32,10 +32,10 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("%");
     printf("%");
-    len = _printf("%d", -1024);
-    len2 = printf("%d", -1024);
-    _printf("_printf Len of 1024:[%d], printf Len of 1024:[%d]\n", len, len2);
-    printf("_printf Len of 1024:[%d], printf Len of 1024:[%d]\n", len, len2);
+    len = _printf("_printf:%d\n", INT_MIN);
+    len2 = printf("printf:%d\n", INT_MIN);
+    _printf("_printf Len:[%d], printf Len:[%d]\n", len, len2);
+    printf("_printf Len:[%d], printf Len:[%d]\n", len, len2);
 
     /*
     _printf("Address:[%p]\n", addr);

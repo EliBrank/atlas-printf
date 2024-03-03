@@ -55,7 +55,7 @@ int print_percent(void)
  * Return: sends back updated print count
  */
 
-int print_int(int d, int *count)
+int print_int(long d, int *count)
 {
 	if (d < 0)
 	{
