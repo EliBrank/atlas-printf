@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * print_str - prints string
@@ -57,7 +58,14 @@ int print_percent(void)
 
 int print_int(int d, int *count)
 {
-	if (d < 0)
+	if (d == INT_MIN)
+	{
+		(*count)++;
+		_putchar('-');
+		print_int((long)d / 10, count);
+		_putchar('0' + (-(d % 10)));
+	}
+	else if (d < 0)
 	{
 		(*count)++;
 		_putchar('-');
