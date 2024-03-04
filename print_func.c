@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <limits.h>
+#include <stdbool.h>
 
 /**
  * print_str - prints string
@@ -56,32 +57,39 @@ int print_percent(void)
  * Return: sends back updated print count
  */
 
-int print_int(int d, int *count)
+int print_int(int d)
 {
+	int div = 1;
+	int digit_count = 1;
+	bool minCase = false;
+	int count = 0;
+
 	if (d == INT_MIN)
+		minCase = true;
+
+	if (minCase)
+		d++;
+
+	if (d < 0)
 	{
-		(*count)++;
-		_putchar('-');
-		print_int((long)d / 10, count);
-		_putchar('0' + (-(d % 10)));
-	}
-	else if (d < 0)
-	{
-		(*count)++;
+		count++;
 		_putchar('-');
 		d *= -1;
 	}
-	if (d < 10 && d >= 0)
+	while (div <= d / 10)
 	{
-		(*count)++;
-		_putchar(d + '0');
+		digit_count++;
+		div *= 10;
 	}
-	else
+	count += digit_count;
+	while (digit_count > 0)
 	{
-		(*count)++;
-		print_int(d / 10, count);
-		_putchar((d % 10) + '0');
+		if (minCase && digit_count == 1)
+			d++;
+		_putchar((d / div) + '0');
+		d %= div;
+		div /= 10;
+		digit_count--;
 	}
-	return (*count);
+	return (count);
 }
-
