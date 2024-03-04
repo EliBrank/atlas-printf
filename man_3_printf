@@ -9,14 +9,16 @@ _printf \- custom printf function
 The
 .B _printf
 function produces output according to a format and supports the following:
-.IP \fB%c\fP
+.IP \fBc\fP
 Character specifier.
-.IP \fB%s\fP
+.IP \fBs\fP
 String specifier.
 .IP \fB%\fP
 Percent specifier.
-.IP \fB%d\fP, \fB%i\fP
+.IP \fBd\fP
 Integer specifiers.
+.IP \fBi\fP
+Unsigned integer specifers.
 .SH RETURN VALUE
 The function returns the number of characters printed (excluding the null byte used to end output to strings).
 .SH EXAMPLES
@@ -24,8 +26,9 @@ The function returns the number of characters printed (excluding the null byte u
 #include <stdio.h>
 #include "main.h"
 int main (void) {
-	_printf("Hello, %s!\n", "world")
+	_printf("Hello, %s!\\nToday is day %d of %s %u\\n", "world", 4, "March", 2024)
 	return (0);
+
 }
 .fi
 .SH SEE ALSO
