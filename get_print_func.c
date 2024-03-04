@@ -1,14 +1,12 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * get_print_func - gets math operator for two ints
+ * get_print_func - gets print function based on the format specifier
  * @t: char which determines specifier to print
  * @args: brings in arguments from variadic func
  *
- * Return: pointer to func that corresponds to print specifier, NULL if failure
+ * Return: updated count provided by print function called
  */
 
 int get_print_func(char t, va_list args)
