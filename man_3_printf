@@ -31,6 +31,6 @@ int main (void) {
 .SH SEE ALSO
 printf(3)
 .SH AUTHOR
-Eli and Kelci
+Elias Brinkman and Kelci Atkinson
 .SH BUGS
 No known bugs.
