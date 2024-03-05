@@ -1,21 +1,23 @@
 # atlas-printf
 Recreation of printf variadic function in C
 
-FILES INCLUDED
+## FILES INCLUDED
 
-_printf.c \
+### _printf.c \
 	int _printf(const char *format, ...); \
-_putchar.c \
+### _putchar.c \
 	int _putchar(char c); \
-get_print_func.c \
+### get_print_func.c \
 	int get_print_func(char t, va_list args); \
-print_func.c \
+### print_func.c \
 	int print_str(char *s); \
 	int print_char(char c); \
 	int print_percent(void); \
 	int print_int(int d); \
-main.h \
+### main.h \
 	includes all functions listed above \
-man_3_printf
+### man_3_printf
+
+## FLOWCHART
 
 ![function flowchart](./extra/_printf_flowchart.png "_printf function flowchart")
