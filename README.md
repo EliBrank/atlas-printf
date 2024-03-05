@@ -1,8 +1,7 @@
 # atlas-printf
-Recreation of printf variadic function in C \
+Recreation of printf variadic function in C
 
-
-FILES INCLUDED \
+FILES INCLUDED
 
 _printf.c \
 	int _printf(const char *format, ...); \
@@ -17,4 +16,4 @@ print_func.c \
 	int print_int(int d); \
 main.h \
 	includes all functions listed above \
-man_3_printf \
+man_3_printf
