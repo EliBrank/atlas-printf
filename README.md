@@ -17,3 +17,5 @@ print_func.c \
 main.h \
 	includes all functions listed above \
 man_3_printf
+
+![function flowchart](./extra/_printf_flowchart.png "_printf function flowchart")
