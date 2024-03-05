@@ -12,7 +12,7 @@ function produces output according to a format and supports the following:
 .IP \fBc\fP
 Character specifier- converts the 'int argument' to an unsigned char, and prints the resulting character.
 .IP \fBs\fP
-String specifier- expects the 'const char *' argument to be a pointer to an array or string. Prints characters from the array until the null byte ('\e0') is encountered.  
+String specifier- expects the 'const char *' argument to be a pointer to an array or string. Prints characters from the array until the null byte ('\e0') is encountered.
 .IP \fB%\fP
 Percent specifier- simply prints a '%' character.
 .IP \fBd\fP
@@ -27,7 +27,7 @@ The function returns the number of characters printed (excluding the null byte u
 #include "main.h"
 int main (void)
 {
-	_printf("Hello, %s!\\nToday is day %d of %s %u\\n", "world", 4, "March", 2024)
+	_printf("Hello, %s!\\nToday is day %d of %s %i\\n", "world", 4, "March", 2024)
 	return (0);
 }
 .fi
