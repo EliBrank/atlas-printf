@@ -18,7 +18,7 @@ Percent specifier- simply prints a '%' character.
 .IP \fBd\fP
 Integer specifiers- the int argument is converted to signed decimal notation.
 .IP \fBi\fP
-Unsigned integer specifers.
+Unsigned integer specifers- similar to %d, but for unsigned integers.
 .SH RETURN VALUE
 The function returns the number of characters printed (excluding the null byte used to end output to strings).
 .SH EXAMPLES
