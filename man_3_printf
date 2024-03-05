@@ -10,18 +10,13 @@ The
 .B _printf
 function produces output according to a format and supports the following:
 .IP \fBc\fP
-Character specifier- the 'int argument' is converted to an unsigned char, and the resulting character is printed.
+Character specifier- converts the 'int argument' to an unsigned char, and prints the resulting character.
 .IP \fBs\fP
-String specifier- the 'const char *' argument is expected to be a pointer to an array/pointer to a string. Characters from the array are written up to and excluding the null byte ('\0').  
+String specifier- expects the 'const char *' argument to be a pointer to an array or string. Prints characters from the array until the null byte ('\0') is encountered.  
 .IP \fB%\fP
-Percent specifier- a '%' is printed.
+Percent specifier- simply prints a '%' character.
 .IP \fBd\fP
 Integer specifiers- the int argument is converted to signed decimal notation.
-              The precision, if any, gives the minimum number of digits
-              that must appear; if the converted value requires fewer
-              digits, it is padded on the left with zeros.  The default
-              precision is 1.  When 0 is printed with an explicit
-              precision 0, the output is empty.
 .IP \fBi\fP
 Unsigned integer specifers.
 .SH RETURN VALUE
