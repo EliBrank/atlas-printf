@@ -12,7 +12,7 @@ function produces output according to a format and supports the following:
 .IP \fBc\fP
 Character specifier- converts the 'int argument' to an unsigned char, and prints the resulting character.
 .IP \fBs\fP
-String specifier- expects the 'const char *' argument to be a pointer to an array or string. Prints characters from the array until the null byte ('\0') is encountered.  
+String specifier- expects the 'const char *' argument to be a pointer to an array or string. Prints characters from the array until the null byte ('\e0') is encountered.  
 .IP \fB%\fP
 Percent specifier- simply prints a '%' character.
 .IP \fBd\fP
